@@ -16,7 +16,7 @@ def bananas(s):
             
             if letter == letter_in_s and len(s) - j >= len(search_word) - i and j >= i:
 
-                single_result.append('-' * counter + letter)
+                single_result.append('-' * (counter) + letter)
             
             counter += 1
         
@@ -30,16 +30,30 @@ def bananas(s):
 
     result = []
 
-    for i in search_map:
-        print(i)
+    back_map = search_map[0]
+    for i, map in enumerate(search_map[1:]):
 
-    return search_map
+        result = determine_map(back_map, map)
+        back_map = result
+
+
+    for i in range(len(result)):
+        if len(result[i]) != len(s):
+            result[i] += '-' * (len(s) - len(result[i]))
+
+
+    return list(set(result))
 
     
-def determine_map(map):
+def determine_map(map1, map2):
+    
+    result = []
+    for map1_l in map1:
+        for map2_l in map2: 
+            if len(map1_l) < len(map2_l):
+                result.append(map1_l + map2_l[len(map1_l):])
 
-    return 
+    return result
 
 
 
-print('bananana', bananas('bananana'))
