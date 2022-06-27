@@ -3,6 +3,9 @@ Given a string of letters a, b, n how many different ways can you make the word 
 by crossing out various letters and then reading left-to-right?
 '''
 
+from Amain import timeComplete
+
+@timeComplete
 def bananas(s):
 
     search_word = 'banana'
@@ -54,6 +57,9 @@ def determine_map(map1, map2):
                 result.append(map1_l + map2_l[len(map1_l):])
 
     return result
+
+
+print(len(bananas("bbaannaannnabbaannaannnabbaannaannnabbaannaannnabbaannaannnabbaannaannnabbaannaannnabbaannaannna")))
 
 
 
