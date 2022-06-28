@@ -69,4 +69,3 @@ def calculate(expression):
 
 
 print(calculate('1'))
-print(type(calculate('1.1')))
