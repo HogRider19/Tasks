@@ -7,7 +7,9 @@ from outermost elements to the middle element, traveling clockwise.
 def snail(snail_map):
 
     if len(snail_map) == 1:
-        return snail_map
+        return snail_map[0]
+    elif len(snail_map) == 0:
+        return []
 
     result = []
     new_matrix = snail_map
