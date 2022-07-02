@@ -5,20 +5,12 @@ if you are not in Egypt at the time. For example,
 let's consider the following problem.
 """
 
-def longest_slide_down(pyramid):
-
-    return get_map(pyramid)
-
-def get_map(pyramid):
-    map_lest = []
-    for i, row in enumerate(pyramid):
-        buffer_row = []
-        for j, element in enumerate(row):
-            buffer_row.append( [element, j] )
-        buffer_row =  sorted(buffer_row, reverse=True)
-        map_lest.append(( buffer_row ))
-
-    return map_lest
+def longest_slide_down(p):
+    res = p.pop()
+    while p:
+        tmp = p.pop()
+        res = [tmp[i] + max(res[i],res[i+1])  for i in range(len(tmp))] 
+    return res.pop()
 
 
 
