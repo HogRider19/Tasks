@@ -67,7 +67,6 @@ def get_matrix_down(matrix):
     return down_matrix
 
 
-
 array = [[1,2,3],
          [4,5,6],
          [7,8,9]]
