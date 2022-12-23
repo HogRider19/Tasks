@@ -10,12 +10,12 @@ def comp(arr1, arr2):
     arr2.sort()
 
     if len(arr1) != len(arr2):
-    	return False
+        return False
 
     for index, letter in enumerate(arr2):
 
-    	if arr1[index]**2 != letter:
-    		return False
+        if arr1[index]**2 != letter:
+            return False
 
     return True
 
