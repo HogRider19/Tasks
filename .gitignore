@@ -5,3 +5,5 @@ venv/
 ENV/
 env.bak/
 Amain.py
+
+__pycache__

@@ -11,7 +11,7 @@ of building blocks is a perfect square
 import math
 
 
-def is_square(n):    
+def is_square(n):
     return round(sq := math.sqrt(n)) == sq if n >= 0 else False
 
 
