@@ -14,7 +14,7 @@ def encrypt2(st: str, offset: int):
     for letter in st.lower():
         letter_index = ord(letter)
         if 97 <= letter_index <= 122:
-            replace_index = ord(letter) + offset
+            replace_index = letter_index + offset
             if replace_index > 122:
                 replace_index -= 25
             elif replace_index < 97:
