@@ -6,3 +6,4 @@ Your task, is to calculate the minimal number of moves to win the game
 
 def hanoi(disks):
     return 2 ** disks - 1
+
