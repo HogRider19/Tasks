@@ -14,9 +14,6 @@ func detectCycle(head *ListNode) *ListNode {
 		} else {
 			m[pointer] = true
 		}
-		if pointer.Next == nil {
-			return nil
-		}
 		pointer = pointer.Next
 	}
 	return nil
